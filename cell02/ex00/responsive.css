@@ -1,0 +1,21 @@
+html
+{
+	height: 100%;
+}
+body
+{
+	height: 100%;
+}
+table
+{
+	height: 100%;
+	width: 100%;
+	border-collapse: collapse;
+}
+td
+{
+	height: 100%;
+	width: 50%;
+	overflow: hidden;
+	border: 1px solid #333;
+}
