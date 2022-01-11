@@ -1,4 +1,13 @@
 /*Reset CSS*/
+@keyframes rotationPuce{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -67,12 +76,12 @@ nav > ul li:hover .sous{
     border-bottom: none;
     background-color: RGBa(200,200,200,0.1);
 }
-.deroulant > a::after{
-    content:" ◆";
-    font-size: 20px;
+.deroulant > a:after{
+    content:" ▶";
+    font-size: 12px;
+    display: inline-block;
 }
 
-.conteneur{
-  margin: 50px 20px;
-  height: 1500px;
-}
+.deroulant:hover > a:after{
+    animation: rotationPuce 0.2s linear forwards;
+    }
