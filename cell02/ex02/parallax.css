@@ -1,0 +1,44 @@
+body, html {
+	height: 100%;
+	margin: 0;
+	font: 400 15px/1.8 "Lato", sans-serif;
+	color: white;
+}
+
+.bg1, .bg2 {
+	position: relative;
+	opacity: 0.65;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bg1{
+	background-image: url('https://cdn.jspuzzles.com/userpic3/19837.jpg');
+	min-height: 100%;
+}
+
+.bg2{
+	background-image: url('https://www.canalb.fr/sites/default/files/inline-images/giphy.gif');
+	min-height: 100%;
+}
+
+.caption {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	letter-spacing: 9px;
+	text-transform: uppercase;
+	font: 40px "Lato", sans-serif;
+	text-align: center;
+	color: #000;
+}
+
+h1 {
+	letter-spacing: 9px;
+	text-transform: uppercase;
+	font: 40px "Lato", sans-serif;
+	color: #fff;
+}
