@@ -43,12 +43,19 @@ form {
 	width: 100%;
 }
 
-.toDoInput:focus {
-    outline-color: #929292;
+.toDoInput:hover {
+	color: #4285f4;
+	border: 1px solid #4285f4;
 	border-top-left-radius: 1.2rem;
 	border-top-right-radius: 1.2rem;
-	opacity: 0.8;
 	overflow-y: hidden;
+}
+
+.toDoInput:focus {
+	outline-width: ;
+	outline-color: #4285f4;
+	border-top-left-radius: 1.2rem;
+	border-top-right-radius: 1.2rem;
 }
 
 .toDoInput::placeholder {
@@ -73,6 +80,11 @@ form {
 	color: #DB4437;
 	text-decoration: line-through;
 	opacity: 0.8;
+}
+
+.todos li:hover {
+	color: #4285f4;
+	border-top: 1px solid #4285f4;
 }
 
 small {
