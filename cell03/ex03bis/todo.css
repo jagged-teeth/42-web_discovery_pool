@@ -1,0 +1,117 @@
+* {
+	margin: 0;
+	padding: 0;
+	user-select: none;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(65.7deg, #ddd, #fff, #fff, #ddd)
+		fixed;
+	color: #888888;
+	font-family: 'Poppins', sans-serif;
+	height: 90vh;
+	text-align: center;
+	width: 100%
+}
+
+h1 {
+	color: rgb(0, 0, 0);
+	font-size: 160px;
+	text-align: center;
+	opacity: 0.55;
+}
+
+form {
+	box-shadow: 0 10px 80px #0000003d;
+	max-width: 100%;
+	width: 400px;
+	border-radius: 1.2rem;
+	overflow-y: hidden;
+}
+
+.toDoInput {
+	display: block;
+	padding: 16px 32px;
+	border: none;
+	outline: none;
+	font-size: 28px;
+	color: #4285f4;
+	width: 100%;
+	opacity: 0.8;
+}
+
+.toDoInput:hover {
+	border: 1px solid #4285f4;
+	border-radius: 1.2rem;
+	opacity: 0.6;
+	z-index: 1000;
+}
+
+.toDoInputOpen {
+	display: block;
+	padding: 16px 32px;
+	border: none;
+	outline: none;
+	font-size: 28px;
+	color: #4285f4;
+	width: 100%;
+	opacity: 0.8;
+}
+
+.toDoInputOpen:hover {
+	border: 1px solid #4285f4;
+	border-top-left-radius: 1.2rem;
+	border-top-right-radius: 1.2rem;
+	opacity: 0.6;
+	z-index: 1000;
+}
+
+.toDoInput::placeholder {
+	color: #d5d5d5;
+}
+
+.todos {
+	background: #fff;
+	list-style: none;
+	list-style-type: none;
+	opacity: 0.7;
+}
+
+.todos div {
+	border-top: 1px solid #e5e5e5;
+	cursor: pointer;
+	font-size: 24px;
+	padding: 16px 32px;
+}
+
+.todos div.completed {
+	color: #DB4437;
+	text-decoration: line-through;
+	opacity: 0.8;
+}
+
+.todos div:hover {
+	color: #4285f4;
+	border: 1px solid #4285f4;
+}
+
+.todos div:last-child:hover {
+	color: #4285f4;
+	border: 1px solid #4285f4;
+	border-bottom-left-radius: 1.2rem;
+	border-bottom-right-radius: 1.2rem;
+}
+
+small {
+	color: #ffffff;
+	margin-top: 48px;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	opacity: 0.75;
+}
