@@ -39,12 +39,31 @@ form {
 	padding: 16px 32px;
 	border: none;
 	outline: none;
-	font-size: 32px;
+	font-size: 28px;
 	color: #4285f4;
 	width: 100%;
+	opacity: 0.8;
 }
 
 .toDoInput:hover {
+	border: 1px solid #4285f4;
+	border-radius: 1.2rem;
+	opacity: 0.6;
+	z-index: 1000;
+}
+
+.toDoInputOpen {
+	display: block;
+	padding: 16px 32px;
+	border: none;
+	outline: none;
+	font-size: 28px;
+	color: #4285f4;
+	width: 100%;
+	opacity: 0.8;
+}
+
+.toDoInputOpen:hover {
 	border: 1px solid #4285f4;
 	border-top-left-radius: 1.2rem;
 	border-top-right-radius: 1.2rem;
@@ -63,25 +82,25 @@ form {
 	opacity: 0.7;
 }
 
-.todos li {
+.todos div {
 	border-top: 1px solid #e5e5e5;
 	cursor: pointer;
 	font-size: 24px;
 	padding: 16px 32px;
 }
 
-.todos li.completed {
+.todos div.completed {
 	color: #DB4437;
 	text-decoration: line-through;
 	opacity: 0.8;
 }
 
-.todos li:hover {
+.todos div:hover {
 	color: #4285f4;
 	border: 1px solid #4285f4;
 }
 
-.todos li:last-child:hover {
+.todos div:last-child:hover {
 	color: #4285f4;
 	border: 1px solid #4285f4;
 	border-bottom-left-radius: 1.2rem;

@@ -1,6 +1,6 @@
 const form = document.getElementById("form");
 const todoInput = document.getElementById("input");
-const todosList = document.getElementById("todos");
+const todosList = document.getElementById("ft_list");
 
 function addToDo(todo) {
 	let todoText = todoInput.value;
@@ -8,7 +8,8 @@ function addToDo(todo) {
 		todoText = todo.text;
 	}
 	if(todoText) {
-		const todoEl = document.createElement('li');
+		const todoEl = document.createElement('div');
+		todoEl.className = "list";
 		if(todo && todo.completed) {
 			todoEl.classList.add('completed');
 		}
@@ -22,7 +23,7 @@ function addToDo(todo) {
 			todoEl.remove();
 			updateLocalStorage();
 		});
-		todosList.appendChild(todoEl);
+		todosList.prepend(todoEl);
 		todoInput.value = '';
 		updateLocalStorage();
 	}
@@ -30,14 +31,18 @@ function addToDo(todo) {
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
+	todoInput.className = "toDoInput";
+	if (todosList.hasChildNodes) {
+		todoInput.className = "toDoInputOpen";
+	}
 	addToDo();
 });
 
 function updateLocalStorage() {
-	const todosEl = document.querySelectorAll('li');
+	const todosEl = document.querySelectorAll('.list');
 	const todos = [];
 	todosEl.forEach(todoEl => {
-		todos.push({
+		todos.unshift({
 			text: todoEl.innerText,
 			completed: todoEl.classList.contains('completed')
 		});
